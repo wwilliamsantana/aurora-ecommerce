@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Aurora — Joias da Aurora Boreal
 
-## Getting Started
+Uma loja virtual de joias artesanais inspirada nas luzes do céu noturno. Cada peça é única, assim como cada aurora.
 
-First, run the development server:
+---
+
+## Sobre o projeto
+
+Aurora é uma loja fictícia de miçangas e joias artesanais com uma identidade visual imersiva. O fundo animado imita o fenômeno da aurora boreal usando WebGL, e muda de cor conforme o filtro de produto selecionado — criando uma experiência visual que conecta o produto ao ambiente da página.
+
+O projeto foi construído com foco em design e experiência do usuário, combinando animações fluidas, tipografia clean e uma paleta de cores inspirada no espaço.
+
+---
+
+## Funcionalidades
+
+- **Vitrine de produtos** com 8 joias artesanais distribuídas em 3 coleções
+- **Filtro por cor** que atualiza tanto os produtos listados quanto o fundo animado da página
+- **Página de detalhe** de cada produto com descrição, preço e opção de adicionar ao carrinho
+- **Carrinho de compras** com controle de quantidade, remoção de itens e total calculado
+- **Fundo Aurora animado** em WebGL que reage ao contexto da navegação
+
+---
+
+## Páginas
+
+| Rota               | Descrição                                                      |
+| ------------------ | -------------------------------------------------------------- |
+| `/`                | Página inicial com hero, filtro de cores e vitrine de produtos |
+| `/produtos/[slug]` | Detalhe de cada produto                                        |
+| `/carrinho`        | Resumo dos itens adicionados ao carrinho                       |
+| `/sobre`           | Página institucional da marca                                  |
+
+---
+
+## Tecnologias utilizadas
+
+- **[Next.js 16](https://nextjs.org/)** — framework React com App Router
+- **[React 19](https://react.dev/)** — biblioteca de interface
+- **[TypeScript](https://www.typescriptlang.org/)** — tipagem estática
+- **[Tailwind CSS 4](https://tailwindcss.com/)** — estilização utilitária
+- **[Motion](https://motion.dev/)** — animações declarativas
+- **[OGL](https://github.com/oframe/ogl)** — WebGL leve para o efeito de aurora
+- **[Zustand](https://zustand-demo.pmnd.rs/)** — gerenciamento de estado do carrinho
+
+---
+
+## Rodando localmente
+
+**Pré-requisitos:** Node.js 18+ instalado.
 
 ```bash
+# 1. Clone o repositório
+git clone https://github.com/seu-usuario/aurora.git
+cd aurora
+
+# 2. Instale as dependências
+npm install
+
+# 3. Suba o servidor de desenvolvimento
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000) no seu navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Scripts disponíveis
 
-## Learn More
+| Comando         | O que faz                               |
+| --------------- | --------------------------------------- |
+| `npm run dev`   | Inicia o servidor de desenvolvimento    |
+| `npm run build` | Gera o build de produção                |
+| `npm run start` | Sobe o servidor com o build de produção |
+| `npm run lint`  | Verifica erros de lint no código        |
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Coleções
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Coleção Estelar** — peças em verde esmeralda e rosa aurora
+- **Coleção Solar** — tons dourados e roxo ametista
+- **Coleção Ártica** — azul celeste e polar
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
