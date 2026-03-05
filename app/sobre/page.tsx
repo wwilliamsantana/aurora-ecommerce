@@ -40,7 +40,7 @@ export default function SobrePage() {
 
             <h1 className="text-6xl md:text-8xl font-bold text-white mt-6 leading-tight">
               Inspiradas pelo{" "}
-              <span className="bg-gradient-to-r from-[#7cff67] via-[#B19EEF] to-[#5227FF] bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-[#7cff67] via-[#B19EEF] to-[#5227FF] bg-clip-text text-transparent">
                 Céu Noturno
               </span>
             </h1>
@@ -220,7 +220,7 @@ export default function SobrePage() {
             <motion.div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/#colecao"
-                className="px-8 py-4 rounded-2xl bg-gradient-to-r from-[#7cff67] to-[#5227FF] text-[#05050f] font-semibold uppercase tracking-[0.3em] transition hover:shadow-lg hover:shadow-[#7cff67]/50"
+                className="px-8 py-4 rounded-2xl bg-linear-to-r from-[#7cff67] to-[#5227FF] text-[#05050f] font-semibold uppercase tracking-[0.3em] transition hover:shadow-lg hover:shadow-[#7cff67]/50"
               >
                 Explorar Coleção
               </Link>
