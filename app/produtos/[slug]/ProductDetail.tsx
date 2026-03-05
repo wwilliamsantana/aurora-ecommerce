@@ -58,17 +58,17 @@ export function ProductDetail({ product }: ProductDetailProps) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.45, ease: "easeInOut" }}
-          className="mt-10 rounded-[32px] border border-white/10 bg-white/5 p-8 backdrop-blur-3xl shadow-[0_30px_80px_rgba(0,0,0,0.55)]"
+          className="mt-10 rounded-4xl border border-white/10 bg-white/5 p-8 backdrop-blur-3xl shadow-[0_30px_80px_rgba(0,0,0,0.55)]"
         >
           <div className="grid gap-8 lg:grid-cols-[1.1fr_1fr] lg:items-center">
             <div
-              className="relative h-80 overflow-hidden rounded-[24px]"
+              className="relative h-80 overflow-hidden rounded-3xl"
               style={{
                 background: `radial-gradient(circle at 30% 20%, ${product.colorHex}40, transparent 60%), linear-gradient(140deg, #05050f, #19152a)`,
               }}
             >
               <div
-                className="absolute inset-0 rounded-[24px] border border-white/10"
+                className="absolute inset-0 rounded-3xl border border-white/10"
                 style={{
                   boxShadow: `0 25px 60px ${product.colorHex}40, inset 0 0 30px ${product.colorHex}55`,
                 }}
@@ -164,7 +164,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
                     whileHover={{ scale: 1.04 }}
                     whileTap={{ scale: 0.96 }}
                     onClick={handleAddToCart}
-                    className="rounded-2xl bg-gradient-to-br from-white/90 to-white/40 px-6 py-3 text-xs font-semibold uppercase tracking-[0.45em] text-[#05050f] transition flex-1 min-w-[200px]"
+                    className="rounded-2xl bg-linear-to-br from-white/90 to-white/40 px-6 py-3 text-xs font-semibold uppercase tracking-[0.45em] text-[#05050f] transition flex-1 min-w-50"
                   >
                     {isAdded ? "✓ Adicionado!" : "Adicionar ao carrinho"}
                   </motion.button>
