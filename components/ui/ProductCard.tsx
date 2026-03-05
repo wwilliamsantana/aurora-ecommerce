@@ -29,10 +29,9 @@ export function ProductCard({ product, index }: ProductCardProps) {
   return (
     <Link href={`/produtos/${product.slug}`} className="block">
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -20 }}
-        transition={{ delay: index * 0.07, duration: 0.45 }}
+        initial={{ y: 20 }}
+        animate={{ y: 0 }}
+        transition={{ delay: index * 0.07, duration: 0.35, ease: "easeOut" }}
         className="group relative flex flex-col bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl overflow-hidden hover:bg-white/15 hover:border-white/30 transition-all duration-300"
         style={{
           boxShadow: `0 4px 30px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.08)`,
