@@ -15,7 +15,8 @@ O projeto foi construído com foco em design e experiência do usuário, combina
 ## Funcionalidades
 
 - **Vitrine de produtos** com 8 joias artesanais distribuídas em 3 coleções
-- **Filtro por cor** que atualiza tanto os produtos listados quanto o fundo animado da página
+- **Imagens por cor** — cada card exibe uma foto real correspondente ao filtro de cor selecionado, alternando entre variantes quando há múltiplos produtos da mesma cor
+- **Filtro por cor** que atualiza os produtos listados, as imagens dos cards e o fundo animado da página
 - **Página de detalhe** de cada produto com descrição, preço e opção de adicionar ao carrinho
 - **Carrinho de compras** com controle de quantidade, remoção de itens e total calculado
 - **Fundo Aurora animado** em WebGL que reage ao contexto da navegação
@@ -42,6 +43,7 @@ O projeto foi construído com foco em design e experiência do usuário, combina
 - **[Motion](https://motion.dev/)** — animações declarativas
 - **[OGL](https://github.com/oframe/ogl)** — WebGL leve para o efeito de aurora
 - **[Zustand](https://zustand-demo.pmnd.rs/)** — gerenciamento de estado do carrinho
+- **next/image** — otimização automática das imagens dos produtos
 
 ---
 

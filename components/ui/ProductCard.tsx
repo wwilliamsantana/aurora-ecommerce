@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "motion/react";
 import { Product } from "@/data/products";
 
@@ -9,7 +10,22 @@ interface ProductCardProps {
   index: number;
 }
 
+const COLOR_IMAGES: Record<string, string[]> = {
+  verde: ["/verde1.png", "/verde2.png"],
+  roxo: ["/roxo1.png", "/roxo2.png"],
+  azul: ["/azul1.png", "/azul2.png"],
+  dourado: ["/laranja.png"],
+  rosa: ["/rosa.jpg"],
+};
+
+function getProductImage(colorSlug: string, index: number): string {
+  const images = COLOR_IMAGES[colorSlug] ?? ["/verde1.png"];
+  return images[index % images.length];
+}
+
 export function ProductCard({ product, index }: ProductCardProps) {
+  const imageSrc = getProductImage(product.colorSlug, index);
+
   return (
     <Link href={`/produtos/${product.slug}`} className="block">
       <motion.div
@@ -22,53 +38,14 @@ export function ProductCard({ product, index }: ProductCardProps) {
           boxShadow: `0 4px 30px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.08)`,
         }}
       >
-        {/* Visual de miçangas */}
-        <div
-          className="relative h-44 w-full overflow-hidden flex items-center justify-center"
-          style={{
-            background: `radial-gradient(ellipse at 50% 80%, ${product.colorHex}22, transparent 70%),
-                       linear-gradient(160deg, #0d0d1f 0%, #1a0d30 100%)`,
-          }}
-        >
-          {/* Fio decorativo */}
-          <div
-            className="absolute w-3/4 h-px opacity-20"
-            style={{
-              top: "50%",
-              background: `linear-gradient(90deg, transparent, ${product.colorHex}, transparent)`,
-            }}
+        {/* Imagem do produto */}
+        <div className="relative h-44 w-full overflow-hidden">
+          <Image
+            src={imageSrc}
+            alt={product.name}
+            fill
+            className="object-cover brightness-90 transition-transform duration-500 group-hover:scale-105 "
           />
-
-          {/* Miçangas */}
-          <div className="flex items-center gap-2 z-10">
-            {[...Array(7)].map((_, i) => {
-              const size =
-                12 + Math.round(Math.abs(Math.sin((i + 1) * 1.2)) * 8);
-              const opacity = 0.6 + (i % 3) * 0.13;
-              return (
-                <motion.div
-                  key={i}
-                  animate={{ y: [0, -3, 0] }}
-                  transition={{
-                    duration: 2.5 + i * 0.3,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                    delay: i * 0.15,
-                  }}
-                  className="rounded-full shrink-0"
-                  style={{
-                    width: size,
-                    height: size,
-                    backgroundColor: product.colorHex,
-                    backgroundImage: `radial-gradient(circle at 30% 28%, rgba(255,255,255,0.65), transparent 55%)`,
-                    boxShadow: `0 0 ${size}px ${product.colorHex}88, 0 2px 4px rgba(0,0,0,0.4)`,
-                    opacity,
-                  }}
-                />
-              );
-            })}
-          </div>
-
           {/* Tag da coleção */}
           <span className="absolute top-3 left-3 text-xs font-medium px-2.5 py-1 rounded-full bg-black/40 backdrop-blur-sm text-white/70 border border-white/10">
             {product.collection}
