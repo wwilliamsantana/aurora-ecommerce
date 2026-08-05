@@ -7,6 +7,10 @@ A modern e-commerce experience for handcrafted jewelry inspired by the colors an
 
 Aurora is a fictional jewelry store built to showcase modern frontend development, immersive UI design, and interactive user experiences. The project combines a responsive shopping interface with a dynamic WebGL background that adapts to user interactions, creating a cohesive visual experience where the environment reflects the selected product collection.
 
+## Live
+
+### https://aurora-ecommerce-vert.vercel.app/
+
 ##  Project Highlights
 
 - Immersive landing page with animated Aurora Borealis background powered by WebGL
@@ -58,7 +62,7 @@ Aurora is a fictional jewelry store built to showcase modern frontend developmen
 - **Zustand** (state management)
 - **next/image** (image optimization)
 
----
+
 
 ##  Design 
 
