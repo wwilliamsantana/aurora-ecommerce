@@ -22,7 +22,7 @@ export function ColorFilter() {
   return (
     <div className="flex gap-4 p-5 items-center justify-center flex-wrap">
       <span className="text-sm font-medium text-white/50 tracking-wide">
-        Filtrar por tom:
+        Filter by color:
       </span>
 
       {COLORS.map((color, i) => (
@@ -65,7 +65,7 @@ export function ColorFilter() {
           }}
           className="text-xs text-white/40 hover:text-white/80 transition-colors px-3 py-1 rounded-full border border-white/10 hover:border-white/30"
         >
-          Limpar
+          Clean
         </motion.button>
       )}
     </div>

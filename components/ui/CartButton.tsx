@@ -22,7 +22,7 @@ export function CartButton() {
         className="flex items-center gap-2 px-5 py-2 rounded-xl bg-white/10 border border-white/20 hover:bg-white/20 hover:border-white/40 text-white text-sm font-medium transition-all duration-300"
         disabled
       >
-        <span>Carrinho (0)</span>
+        <span>Cart: (0)</span>
       </motion.button>
     );
   }
@@ -34,7 +34,7 @@ export function CartButton() {
         whileTap={{ scale: 0.96 }}
         className="relative flex items-center gap-2 px-5 py-2 rounded-xl bg-white/10 border border-white/20 hover:bg-white/20 hover:border-white/40 text-white text-sm font-medium transition-all duration-300"
       >
-        <span>Carrinho ({totalItems})</span>
+        <span>Cart: ({totalItems})</span>
 
         <AnimatePresence>
           {totalItems > 0 && (

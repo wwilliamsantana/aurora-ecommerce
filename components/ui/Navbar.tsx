@@ -24,13 +24,13 @@ export function Navbar() {
           href="/#collection"
           className="hover:text-white transition-colors duration-200"
         >
-          Coleções
+          Collection
         </Link>
         <Link
           href="/about"
           className="hover:text-white transition-colors duration-200"
         >
-          Sobre
+          About
         </Link>
       </div>
 

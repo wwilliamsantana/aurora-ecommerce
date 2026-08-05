@@ -52,7 +52,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
           className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.4em] text-white/50 transition hover:text-white"
         >
           <span>←</span>
-          <span>Voltar à loja</span>
+          <span>Back to Store</span>
         </Link>
 
         <motion.section
@@ -87,13 +87,16 @@ export function ProductDetail({ product }: ProductDetailProps) {
 
               <div className="flex flex-col gap-2">
                 <p className="text-sm uppercase tracking-[0.4em] text-white/40">
-                  Preço sugerido
+                  Suggested Price
                 </p>
                 <p className="text-4xl font-semibold text-white">
-                  R$ {product.price.toFixed(2).replace(".", ",")}
+                  {new Intl.NumberFormat("en-US", {
+                    style: "currency",
+                    currency: "USD",
+                  }).format(product.price)}
                 </p>
                 <p className="text-xs uppercase tracking-[0.35em] text-white/50">
-                  + Frete calculado no checkout
+                  Shipping calculated at checkout
                 </p>
               </div>
 
@@ -129,7 +132,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
                     onClick={handleAddToCart}
                     className="rounded-2xl bg-linear-to-br from-white/90 to-white/40 px-6 py-3 text-xs font-semibold uppercase tracking-[0.45em] text-[#05050f] transition flex-1 min-w-50"
                   >
-                    {isAdded ? "✓ Adicionado!" : "Adicionar ao carrinho"}
+                    {isAdded ? "✓ Added!" : "Add to Cart"}
                   </motion.button>
                   <motion.button
                     whileHover={{ scale: 1.04 }}
@@ -137,7 +140,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
                     onClick={handleViewCollection}
                     className="rounded-2xl border border-white/20 px-6 py-3 text-xs font-semibold uppercase tracking-[0.4em] text-white/80 transition hover:border-white/40 hover:text-white"
                   >
-                    Ver coleção
+                    View Collection
                   </motion.button>
                 </div>
               </div>

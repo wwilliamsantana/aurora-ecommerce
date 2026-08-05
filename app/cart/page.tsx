@@ -15,6 +15,11 @@ export default function Cart() {
     useCartStore();
   const totalPrice = getTotalPrice();
 
+  const currency = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+  });
+
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -54,7 +59,7 @@ export default function Cart() {
           className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.4em] text-white/50 transition hover:text-white mb-8"
         >
           <span>←</span>
-          <span>Voltar à loja</span>
+          <span>Back to Store</span>
         </Link>
 
         <motion.div
@@ -63,20 +68,21 @@ export default function Cart() {
           transition={{ duration: 0.45, ease: "easeInOut" }}
         >
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-10">
-            Seu Carrinho
+            Your Cart
           </h1>
 
           {items.length === 0 ? (
             <div className="text-center py-20">
               <span className="text-6xl mb-4 block">🛍</span>
               <p className="text-white/50 text-lg mb-8">
-                Seu carrinho está vazio. Que tal explorar nossa coleção?
+                Your cart is empty. Explore our collection and find your next
+                favorite piece.
               </p>
               <Link
                 href="/#collection"
                 className="inline-block px-8 py-4 rounded-2xl bg-linear-to-r from-[#7cff67] to-[#5227FF] text-[#05050f] font-semibold uppercase tracking-[0.3em] transition hover:shadow-lg hover:shadow-[#7cff67]/50"
               >
-                Explorar Coleção
+                Explore Collection
               </Link>
             </div>
           ) : (
@@ -120,7 +126,7 @@ export default function Cart() {
                         {item.product.collection}
                       </p>
                       <p className="text-white font-bold">
-                        R$ {item.product.price.toFixed(2).replace(".", ",")}
+                        {currency.format(item.product.price)}
                       </p>
                     </div>
 
@@ -154,7 +160,7 @@ export default function Cart() {
                         onClick={() => removeItem(item.product.id)}
                         className="text-xs text-red-400 hover:text-red-300 transition uppercase tracking-wider"
                       >
-                        Remover
+                        Remove
                       </button>
                     </div>
                   </motion.div>
@@ -167,20 +173,22 @@ export default function Cart() {
                 transition={{ duration: 0.3, delay: 0.2 }}
                 className="sticky top-28 h-fit p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-3xl"
               >
-                <h2 className="text-xl font-bold text-white mb-6">Resumo</h2>
+                <h2 className="text-xl font-bold text-white mb-6">
+                  Order Summary
+                </h2>
 
                 <div className="space-y-4 mb-6 pb-6 border-b border-white/10">
                   <div className="flex justify-between text-white/70">
                     <span>Subtotal</span>
-                    <span>R$ {totalPrice.toFixed(2).replace(".", ",")}</span>
+                    <span>{currency.format(totalPrice)}</span>
                   </div>
                   <div className="flex justify-between text-white/70">
-                    <span>Frete</span>
-                    <span>Calculado no checkout</span>
+                    <span>Shipping</span>
+                    <span>Calculated at checkout</span>
                   </div>
                   <div className="flex justify-between text-lg font-bold text-white pt-2">
                     <span>Total</span>
-                    <span>R$ {totalPrice.toFixed(2).replace(".", ",")}</span>
+                    <span>{currency.format(totalPrice)}</span>
                   </div>
                 </div>
 
@@ -189,14 +197,14 @@ export default function Cart() {
                   whileTap={{ scale: 0.96 }}
                   className="w-full py-3 rounded-xl bg-linear-to-r from-[#7cff67] to-[#5227FF] text-[#05050f] font-bold uppercase tracking-[0.2em] transition hover:shadow-lg hover:shadow-[#7cff67]/50 mb-3"
                 >
-                  Continuar Compra
+                  Proceed to Checkout
                 </motion.button>
 
                 <button
                   onClick={() => clearCart()}
                   className="w-full py-2 rounded-xl border border-white/20 text-white/80 font-medium uppercase tracking-[0.2em] hover:bg-white/5 transition text-sm"
                 >
-                  Limpar Carrinho
+                  Clear Cart
                 </button>
               </motion.div>
             </div>

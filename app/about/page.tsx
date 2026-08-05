@@ -35,20 +35,20 @@ export default function About() {
               transition={{ delay: 0.4, duration: 0.6 }}
               className="text-white/50 text-xs uppercase tracking-[0.4em]"
             >
-              Nossa História
+              Our Story
             </motion.span>
 
             <h1 className="text-6xl md:text-8xl font-bold text-white mt-6 leading-tight">
-              Inspiradas pelo{" "}
+              Inspired by the{" "}
               <span className="bg-linear-to-r from-[#7cff67] via-[#B19EEF] to-[#5227FF] bg-clip-text text-transparent">
-                Céu Noturno
+                Northern Lights
               </span>
             </h1>
 
             <p className="text-white/60 text-lg md:text-xl mt-8 leading-relaxed max-w-2xl mx-auto">
-              Aurora nasceu da contemplação das luzes do norte. Cada miçanga é
-              um fragmento de um momento celestial capturado, transformado em
-              arte que você pode levar consigo.
+              Aurora is a fictional jewelry brand created to explore modern
+              e-commerce design, immersive animations, and handcrafted
+              aesthetics inspired by the Northern Lights.
             </p>
           </motion.div>
         </section>
@@ -63,28 +63,27 @@ export default function About() {
           >
             <div>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Uma Ligação Genuína com o Céu
+                A Genuine Connection to the Night Sky
               </h2>
 
               <div className="space-y-4 text-white/70 text-base leading-relaxed">
                 <p>
-                  O céu sempre foi símbolo de infinito, liberdade e mistério. A
-                  aurora boreal representa a dança entre a ciência e a
-                  espiritualidade — luzes naturais que pintam o horizonte com
-                  cores que parecem impossíveis.
+                  For centuries, the night sky has symbolized wonder, freedom,
+                  and the infinite. The Aurora Borealis embodies the harmony
+                  between nature and science, painting the horizon with colors
+                  that seem almost otherworldly.
+                </p>
+                <p>
+                  At Aurora, our goal is to bring that magic closer to you.
+                  Every handcrafted piece is inspired by the beauty of the sky,
+                  reminding us that although we are small, we are all connected
+                  to something far greater.
                 </p>
 
                 <p>
-                  Na Aurora, queremos trazer essa mágica para mais perto de
-                  você. Cada peça é uma conversa com o céu noturno. Através das
-                  miçangas coloridas, lembramos que somos pequenos, mas
-                  conectados a algo muito maior.
-                </p>
-
-                <p>
-                  Quando você usa uma peça Aurora, você carrega consigo um
-                  pedaço desse universo infinito. Uma conexão tangível com a
-                  beleza celestial que nos inspira diariamente.
+                  Wearing an Aurora piece means carrying a tangible reminder of
+                  the universe's endless beauty—a subtle connection to the
+                  celestial wonders that inspire us every day.
                 </p>
               </div>
             </div>
@@ -155,25 +154,25 @@ export default function About() {
               viewport={{ once: true }}
               className="text-4xl md:text-5xl font-bold text-white mb-16 text-center"
             >
-              Nossos Valores
+              Our Values
             </motion.h2>
 
             <div className="grid gap-8 md:grid-cols-3 text-center">
               {[
                 {
-                  title: "Autenticidade",
+                  title: "Authenticity",
                   description:
-                    "Cada peça conta uma história genuína inspirada nas luzes naturais do céu.",
+                    "Every handcrafted piece tells a unique story inspired by the natural beauty of the Northern Lights.",
                 },
                 {
-                  title: "Conexão Celestial",
+                  title: "Celestial Connection",
                   description:
-                    "Acreditamos que a beleza do universo deve estar ao alcance de todos.",
+                    "We believe the beauty of the universe should be something everyone can experience.",
                 },
                 {
                   title: "Craftsmanship",
                   description:
-                    "Miçangas artesanais com cuidado e atenção aos detalhes em cada criação.",
+                    "Carefully handcrafted jewelry created with attention to detail and lasting quality.",
                 },
               ].map((value, i) => (
                 <motion.div
@@ -203,11 +202,11 @@ export default function About() {
             className="max-w-4xl mx-auto text-center"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Pronto para Conectar-se ao Céu?
+              Ready to Discover Your Piece?
             </h2>
             <p className="text-white/60 text-lg mb-8">
-              Explore nossa coleção e descubra a peça que ressoa com sua energia
-              celestial.
+              Explore our collection and find the handcrafted jewelry that
+              speaks to your unique style.
             </p>
 
             <motion.div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -215,13 +214,13 @@ export default function About() {
                 href="/#collection"
                 className="px-8 py-4 rounded-2xl bg-linear-to-r from-[#7cff67] to-[#5227FF] text-[#05050f] font-semibold uppercase tracking-[0.3em] transition hover:shadow-lg hover:shadow-[#7cff67]/50"
               >
-                Explorar Coleção
+                Explore Collection
               </Link>
               <Link
                 href="/"
                 className="px-8 py-4 rounded-2xl border border-white/30 text-white font-semibold uppercase tracking-[0.3em] hover:bg-white/10 transition"
               >
-                Voltar ao Início
+                Back to Home
               </Link>
             </motion.div>
           </motion.div>

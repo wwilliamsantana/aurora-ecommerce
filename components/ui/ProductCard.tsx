@@ -47,7 +47,10 @@ export function ProductCard({ product, index }: ProductCardProps) {
 
           <div className="flex items-center justify-between mt-auto">
             <span className="text-white font-bold text-lg">
-              R$ {product.price.toFixed(2).replace(".", ",")}
+              {new Intl.NumberFormat("en-US", {
+                style: "currency",
+                currency: "USD",
+              }).format(product.price)}
             </span>
 
             <motion.span
@@ -61,7 +64,7 @@ export function ProductCard({ product, index }: ProductCardProps) {
               }}
               role="presentation"
             >
-              Adicionar
+              To add
             </motion.span>
           </div>
         </div>

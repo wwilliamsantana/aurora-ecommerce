@@ -48,19 +48,19 @@ export function StoreContent() {
             transition={{ delay: 0.5, duration: 0.8 }}
             className="text-white/40 text-xs uppercase tracking-[0.3em]"
           >
-            Coleção Exclusiva
+            Exclusive Collection
           </motion.span>
 
           <h1 className="text-5xl md:text-8xl font-bold text-white leading-tight">
-            Joias da{" "}
+            Aurora Borealis{" "}
             <span className="bg-linear-to-r from-[#7cff67] via-[#B19EEF] to-[#5227FF] bg-clip-text text-transparent">
-              Aurora Boreal
+              Jewelry
             </span>
           </h1>
 
           <p className="text-white/50 text-base md:text-xl max-w-xl leading-relaxed">
-            Miçangas artesanais inspiradas nas luzes do céu setentrional. Cada
-            peça, uma aurora única.
+            Handcrafted jewelry inspired by the beauty of the Aurora Borealis.
+            Every piece is unique—just like the lights that inspired it.
           </p>
 
           <motion.a
@@ -72,7 +72,7 @@ export function StoreContent() {
               boxShadow: "0 0 40px rgba(124,255,103,0.1)",
             }}
           >
-            Explorar Coleção ↓
+            Explore Collection ↓
           </motion.a>
         </motion.div>
       </section>
@@ -87,10 +87,10 @@ export function StoreContent() {
             className="text-center mb-10"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
-              Nossas Peças
+              Our Collection
             </h2>
             <p className="text-white/40 text-sm">
-              Selecione um tom para filtrar por cor
+              Select a color to filter the collection
             </p>
           </motion.div>
 
@@ -131,9 +131,7 @@ export function StoreContent() {
                 className="flex flex-col items-center gap-4 py-24 text-white/30"
               >
                 <span className="text-5xl">🔮</span>
-                <p className="text-lg">
-                  Nenhuma peça encontrada para este tom.
-                </p>
+                <p className="text-lg">No pieces found for this color.</p>
               </motion.div>
             )}
           </AnimatePresence>

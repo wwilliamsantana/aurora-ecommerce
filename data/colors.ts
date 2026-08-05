@@ -5,11 +5,11 @@ export type ColorOption = {
 };
 
 export const COLORS: ColorOption[] = [
-  { name: "Esmeralda", hex: "#00ff88", slug: "verde" },
-  { name: "Ametista", hex: "#9d00ff", slug: "roxo" },
-  { name: "Céu Ártico", hex: "#00d4ff", slug: "azul" },
-  { name: "Solar", hex: "#ffaa00", slug: "dourado" },
-  { name: "Aurora Rosa", hex: "#ff2d78", slug: "rosa" },
+  { name: "Emerald", hex: "#00ff88", slug: "verde" },
+  { name: "Amethyst", hex: "#9d00ff", slug: "roxo" },
+  { name: "Arctic Sky", hex: "#00d4ff", slug: "azul" },
+  { name: "Solar Gold", hex: "#ffaa00", slug: "dourado" },
+  { name: "Aurora Pink", hex: "#ff2d78", slug: "rosa" },
 ];
 
 export const AURORA_COLORS: Record<string, string[]> = {
