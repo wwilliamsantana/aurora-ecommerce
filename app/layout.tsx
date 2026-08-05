@@ -11,7 +11,7 @@ const geistSans = Geist({
 export const metadata: Metadata = {
   title: "Aurora | Modern Jewelry E-commerce",
   description:
-    "A fictional jewelry e-commerce built with Next.js 16, React 19, TypeScript, Tailwind CSS, Motion, OGL, and Zustand. Designed to showcase immersive UI, WebGL animations, and modern frontend architecture.",
+    "A jewelry e-commerce built with Next.js 16, React 19, TypeScript, Tailwind CSS, Motion, OGL, and Zustand. Designed to showcase immersive UI, WebGL animations, and modern frontend architecture.",
 };
 
 export default function RootLayout({
