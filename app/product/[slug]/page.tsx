@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { use } from "react";
 import { ProductDetail } from "./ProductDetail";
-import { AURORA_COLORS } from "@/data/colors";
 import { PRODUCTS } from "@/data/products";
 
 interface ProductPageProps {
@@ -33,7 +32,7 @@ export async function generateMetadata({
   };
 }
 
-export default function ProductPage({ params }: ProductPageProps) {
+export default function Product({ params }: ProductPageProps) {
   const { slug } = use(params);
   const product = PRODUCTS.find((item) => item.slug === slug);
   if (!product) {

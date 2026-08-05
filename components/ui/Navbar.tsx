@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { motion } from "motion/react";
-import Image from "next/image";
 import { CartButton } from "./CartButton";
 
 export function Navbar() {
@@ -22,13 +21,13 @@ export function Navbar() {
 
       <div className="hidden md:flex items-center gap-8 text-white/60 text-sm">
         <Link
-          href="/#colecao"
+          href="/#collection"
           className="hover:text-white transition-colors duration-200"
         >
           Coleções
         </Link>
         <Link
-          href="/sobre"
+          href="/about"
           className="hover:text-white transition-colors duration-200"
         >
           Sobre

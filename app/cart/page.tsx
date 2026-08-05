@@ -7,8 +7,9 @@ import { Navbar } from "@/components/ui/Navbar";
 import Aurora from "@/components/ui/Aurora";
 import { useCartStore } from "@/lib/cart-store";
 import { AURORA_COLORS } from "@/data/colors";
+import Image from "next/image";
 
-export default function CarrinhoPage() {
+export default function Cart() {
   const [mounted, setMounted] = useState(false);
   const { items, removeItem, updateQuantity, getTotalPrice, clearCart } =
     useCartStore();
@@ -72,15 +73,14 @@ export default function CarrinhoPage() {
                 Seu carrinho está vazio. Que tal explorar nossa coleção?
               </p>
               <Link
-                href="/#colecao"
-                className="inline-block px-8 py-4 rounded-2xl bg-gradient-to-r from-[#7cff67] to-[#5227FF] text-[#05050f] font-semibold uppercase tracking-[0.3em] transition hover:shadow-lg hover:shadow-[#7cff67]/50"
+                href="/#collection"
+                className="inline-block px-8 py-4 rounded-2xl bg-linear-to-r from-[#7cff67] to-[#5227FF] text-[#05050f] font-semibold uppercase tracking-[0.3em] transition hover:shadow-lg hover:shadow-[#7cff67]/50"
               >
                 Explorar Coleção
               </Link>
             </div>
           ) : (
             <div className="grid gap-8 lg:grid-cols-[1fr_400px]">
-              {/* Lista de produtos */}
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -95,18 +95,23 @@ export default function CarrinhoPage() {
                     exit={{ opacity: 0, x: 20 }}
                     className="flex gap-4 p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-white/20 transition"
                   >
-                    {/* Imagem/Visual */}
                     <div
-                      className="w-24 h-24 rounded-xl flex-shrink-0 flex items-center justify-center"
+                      className="relative w-24 h-24 rounded-xl shrink-0 overflow-hidden"
                       style={{
                         background: `radial-gradient(circle, ${item.product.colorHex}40, transparent 70%), linear-gradient(135deg, #05050f, #1a0d2f)`,
                         boxShadow: `0 0 30px ${item.product.colorHex}33`,
                       }}
                     >
-                      <span className="text-3xl">💎</span>
+                      <Image
+                        src={item.product.image}
+                        fill
+                        alt={item.product.name}
+                        sizes="96px"
+                        unoptimized
+                        className="object-cover"
+                      />
                     </div>
 
-                    {/* Informações */}
                     <div className="flex-1">
                       <h3 className="text-lg font-semibold text-white mb-1">
                         {item.product.name}
@@ -119,7 +124,6 @@ export default function CarrinhoPage() {
                       </p>
                     </div>
 
-                    {/* Quantidade e Remover */}
                     <div className="flex flex-col items-end gap-3">
                       <div className="flex items-center gap-2 bg-white/5 border border-white/10 rounded-lg p-2">
                         <button
@@ -157,7 +161,6 @@ export default function CarrinhoPage() {
                 ))}
               </motion.div>
 
-              {/* Resumo */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -184,7 +187,7 @@ export default function CarrinhoPage() {
                 <motion.button
                   whileHover={{ scale: 1.04 }}
                   whileTap={{ scale: 0.96 }}
-                  className="w-full py-3 rounded-xl bg-gradient-to-r from-[#7cff67] to-[#5227FF] text-[#05050f] font-bold uppercase tracking-[0.2em] transition hover:shadow-lg hover:shadow-[#7cff67]/50 mb-3"
+                  className="w-full py-3 rounded-xl bg-linear-to-r from-[#7cff67] to-[#5227FF] text-[#05050f] font-bold uppercase tracking-[0.2em] transition hover:shadow-lg hover:shadow-[#7cff67]/50 mb-3"
                 >
                   Continuar Compra
                 </motion.button>

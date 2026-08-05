@@ -5,8 +5,9 @@ import { motion } from "motion/react";
 import { Navbar } from "@/components/ui/Navbar";
 import Aurora from "@/components/ui/Aurora";
 import { AURORA_COLORS } from "@/data/colors";
+import { Footer } from "@/components/ui/Footer";
 
-export default function SobrePage() {
+export default function About() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-[#05050f] text-white">
       <div className="pointer-events-none fixed inset-0">
@@ -21,7 +22,6 @@ export default function SobrePage() {
       <Navbar />
 
       <main className="relative z-10">
-        {/* Hero */}
         <section className="flex flex-col items-center justify-center min-h-screen px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -53,7 +53,6 @@ export default function SobrePage() {
           </motion.div>
         </section>
 
-        {/* Seção: A Conexão */}
         <section className="px-6 py-24 md:py-32 max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -147,7 +146,6 @@ export default function SobrePage() {
           </motion.div>
         </section>
 
-        {/* Seção: Valores */}
         <section className="px-6 py-24 md:py-32">
           <div className="max-w-6xl mx-auto">
             <motion.h2
@@ -160,25 +158,22 @@ export default function SobrePage() {
               Nossos Valores
             </motion.h2>
 
-            <div className="grid gap-8 md:grid-cols-3">
+            <div className="grid gap-8 md:grid-cols-3 text-center">
               {[
                 {
                   title: "Autenticidade",
                   description:
                     "Cada peça conta uma história genuína inspirada nas luzes naturais do céu.",
-                  icon: "✨",
                 },
                 {
                   title: "Conexão Celestial",
                   description:
                     "Acreditamos que a beleza do universo deve estar ao alcance de todos.",
-                  icon: "🌌",
                 },
                 {
                   title: "Craftsmanship",
                   description:
                     "Miçangas artesanais com cuidado e atenção aos detalhes em cada criação.",
-                  icon: "🎨",
                 },
               ].map((value, i) => (
                 <motion.div
@@ -187,9 +182,8 @@ export default function SobrePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: i * 0.15 }}
                   viewport={{ once: true }}
-                  className="p-8 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-white/30 transition-all duration-300"
+                  className="p-10 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-white/30 transition-all duration-300"
                 >
-                  <div className="text-4xl mb-4">{value.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-3">
                     {value.title}
                   </h3>
@@ -200,7 +194,6 @@ export default function SobrePage() {
           </div>
         </section>
 
-        {/* Seção: CTA */}
         <section className="px-6 py-24 md:py-32">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -219,7 +212,7 @@ export default function SobrePage() {
 
             <motion.div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/#colecao"
+                href="/#collection"
                 className="px-8 py-4 rounded-2xl bg-linear-to-r from-[#7cff67] to-[#5227FF] text-[#05050f] font-semibold uppercase tracking-[0.3em] transition hover:shadow-lg hover:shadow-[#7cff67]/50"
               >
                 Explorar Coleção
@@ -233,15 +226,8 @@ export default function SobrePage() {
             </motion.div>
           </motion.div>
         </section>
-
-        {/* Footer */}
-        <footer className="px-6 py-12 border-t border-white/10 text-center text-white/40 text-sm">
-          <p>
-            © {new Date().getFullYear()} Aurora. Inspired by the Northern
-            Lights.
-          </p>
-        </footer>
       </main>
+      <Footer />
     </div>
   );
 }

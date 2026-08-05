@@ -10,14 +10,14 @@
   },
   "dependencies": {
     "motion": "^12.34.3",
-    "next": "16.1.6",
+    "next": "^16.3.0",
     "ogl": "^1.0.11",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "zustand": "^5.0.11"
   },
   "devDependencies": {
-    "@rocketseat/eslint-config": "^2.2.2",
+    "@rocketseat/eslint-config": "^3.0.12",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",

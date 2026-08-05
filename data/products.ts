@@ -7,6 +7,7 @@ export type Product = {
   colorSlug: string;
   colorHex: string;
   collection: string;
+  image: string;
 };
 
 export const PRODUCTS: Product[] = [
@@ -20,6 +21,7 @@ export const PRODUCTS: Product[] = [
     colorSlug: "verde",
     colorHex: "#00ff88",
     collection: "Coleção Estelar",
+    image: "/verde1.png",
   },
   {
     id: "2",
@@ -30,6 +32,7 @@ export const PRODUCTS: Product[] = [
     colorSlug: "roxo",
     colorHex: "#9d00ff",
     collection: "Coleção Solar",
+    image: "/roxo1.png",
   },
   {
     id: "3",
@@ -40,6 +43,7 @@ export const PRODUCTS: Product[] = [
     colorSlug: "azul",
     colorHex: "#00d4ff",
     collection: "Coleção Ártica",
+    image: "/azul1.png",
   },
   {
     id: "4",
@@ -50,6 +54,7 @@ export const PRODUCTS: Product[] = [
     colorSlug: "dourado",
     colorHex: "#ffaa00",
     collection: "Coleção Solar",
+    image: "/laranja.png",
   },
   {
     id: "5",
@@ -60,6 +65,7 @@ export const PRODUCTS: Product[] = [
     colorSlug: "rosa",
     colorHex: "#ff2d78",
     collection: "Coleção Estelar",
+    image: "/rosa.jpg",
   },
   {
     id: "6",
@@ -70,6 +76,7 @@ export const PRODUCTS: Product[] = [
     colorSlug: "verde",
     colorHex: "#00ff88",
     collection: "Coleção Estelar",
+    image: "/verde2.png",
   },
   {
     id: "7",
@@ -80,6 +87,7 @@ export const PRODUCTS: Product[] = [
     colorSlug: "roxo",
     colorHex: "#9d00ff",
     collection: "Coleção Solar",
+    image: "/roxo2.png",
   },
   {
     id: "8",
@@ -90,5 +98,14 @@ export const PRODUCTS: Product[] = [
     colorSlug: "azul",
     colorHex: "#00d4ff",
     collection: "Coleção Ártica",
+    image: "/azul2.png",
   },
 ];
+
+export const COLOR_IMAGES: Record<string, string[]> = {
+  verde: ["/verde1.png", "/verde2.png"],
+  roxo: ["/roxo1.png", "/roxo2.png"],
+  azul: ["/azul1.png", "/azul2.png"],
+  dourado: ["/laranja.png"],
+  rosa: ["/rosa.jpg"],
+};

@@ -10,24 +10,9 @@ interface ProductCardProps {
   index: number;
 }
 
-const COLOR_IMAGES: Record<string, string[]> = {
-  verde: ["/verde1.png", "/verde2.png"],
-  roxo: ["/roxo1.png", "/roxo2.png"],
-  azul: ["/azul1.png", "/azul2.png"],
-  dourado: ["/laranja.png"],
-  rosa: ["/rosa.jpg"],
-};
-
-function getProductImage(colorSlug: string, index: number): string {
-  const images = COLOR_IMAGES[colorSlug] ?? ["/verde1.png"];
-  return images[index % images.length];
-}
-
 export function ProductCard({ product, index }: ProductCardProps) {
-  const imageSrc = getProductImage(product.colorSlug, index);
-
   return (
-    <Link href={`/produtos/${product.slug}`} className="block">
+    <Link href={`/product/${product.slug}`} className="block">
       <motion.div
         initial={{ y: 20 }}
         animate={{ y: 0 }}
@@ -37,21 +22,19 @@ export function ProductCard({ product, index }: ProductCardProps) {
           boxShadow: `0 4px 30px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.08)`,
         }}
       >
-        {/* Imagem do produto */}
         <div className="relative h-44 w-full overflow-hidden">
           <Image
-            src={imageSrc}
+            src={product.image}
             alt={product.name}
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
             className="object-cover brightness-90 transition-transform duration-500 group-hover:scale-105 "
           />
-          {/* Tag da coleção */}
           <span className="absolute top-3 left-3 text-xs font-medium px-2.5 py-1 rounded-full bg-black/40 backdrop-blur-sm text-white/70 border border-white/10">
             {product.collection}
           </span>
         </div>
 
-        {/* Conteúdo */}
         <div className="flex flex-col flex-1 p-5 gap-3">
           <div>
             <h3 className="text-white font-semibold text-base leading-snug">

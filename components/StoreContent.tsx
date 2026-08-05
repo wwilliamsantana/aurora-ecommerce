@@ -24,7 +24,6 @@ export function StoreContent() {
 
   return (
     <div className="relative w-full min-h-screen bg-[#05050f] overflow-x-hidden">
-      {/* Aurora como fundo fixo */}
       <div className="fixed inset-0 w-full h-full pointer-events-none z-0">
         <Aurora
           colorStops={auroraColors}
@@ -34,10 +33,8 @@ export function StoreContent() {
         />
       </div>
 
-      {/* Navbar */}
       <Navbar />
 
-      {/* Hero */}
       <section className="relative z-10 flex flex-col items-center justify-center min-h-screen px-6 text-center">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -67,7 +64,7 @@ export function StoreContent() {
           </p>
 
           <motion.a
-            href="#colecao"
+            href="#collection"
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.96 }}
             className="mt-2 px-8 py-4 rounded-2xl text-white font-semibold text-base bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 hover:border-white/40 transition-all duration-300"
@@ -80,10 +77,8 @@ export function StoreContent() {
         </motion.div>
       </section>
 
-      {/* Seção de Produtos */}
-      <section id="colecao" className="relative z-10 px-4 md:px-8 pb-24">
+      <section id="collection" className="relative z-10 px-4 md:px-8 pb-24">
         <div className="max-w-6xl mx-auto">
-          {/* Título da seção */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -99,7 +94,6 @@ export function StoreContent() {
             </p>
           </motion.div>
 
-          {/* Filtro de cores */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -110,7 +104,6 @@ export function StoreContent() {
             <ColorFilter />
           </motion.div>
 
-          {/* Grid de produtos */}
           <AnimatePresence mode="wait">
             {filteredProducts.length > 0 ? (
               <motion.div

@@ -7,7 +7,7 @@ import { useCartStore } from "@/lib/cart-store";
 
 export function CartButton() {
   const [mounted, setMounted] = useState(false);
-  const { items, getTotalItems } = useCartStore();
+  const { getTotalItems } = useCartStore();
   const totalItems = getTotalItems();
 
   useEffect(() => {
@@ -22,20 +22,18 @@ export function CartButton() {
         className="flex items-center gap-2 px-5 py-2 rounded-xl bg-white/10 border border-white/20 hover:bg-white/20 hover:border-white/40 text-white text-sm font-medium transition-all duration-300"
         disabled
       >
-        <span>🛍</span>
         <span>Carrinho (0)</span>
       </motion.button>
     );
   }
 
   return (
-    <Link href="/carrinho">
+    <Link href="/cart">
       <motion.button
         whileHover={{ scale: 1.04 }}
         whileTap={{ scale: 0.96 }}
         className="relative flex items-center gap-2 px-5 py-2 rounded-xl bg-white/10 border border-white/20 hover:bg-white/20 hover:border-white/40 text-white text-sm font-medium transition-all duration-300"
       >
-        <span>🛍</span>
         <span>Carrinho ({totalItems})</span>
 
         <AnimatePresence>

@@ -9,6 +9,7 @@ import Aurora from "@/components/ui/Aurora";
 import { Navbar } from "@/components/ui/Navbar";
 import { AURORA_COLORS } from "@/data/colors";
 import { useCartStore } from "@/lib/cart-store";
+import Image from "next/image";
 
 interface ProductDetailProps {
   product: Product;
@@ -22,15 +23,15 @@ export function ProductDetail({ product }: ProductDetailProps) {
   const auroraColors =
     AURORA_COLORS[product.colorSlug] ?? AURORA_COLORS.default;
 
-  const handleAddToCart = () => {
+  function handleAddToCart() {
     addItem(product, quantity);
     setIsAdded(true);
     setTimeout(() => setIsAdded(false), 2000);
-  };
+  }
 
-  const handleViewCollection = () => {
-    router.push(`/?cor=${product.colorSlug}#colecao`);
-  };
+  function handleViewCollection() {
+    router.push(`/?cor=${product.colorSlug}#collection`);
+  }
 
   return (
     <div className="relative min-h-screen overflow-hidden bg-[#05050f] text-white">
@@ -61,52 +62,14 @@ export function ProductDetail({ product }: ProductDetailProps) {
           className="mt-10 rounded-4xl border border-white/10 bg-white/5 p-8 backdrop-blur-3xl shadow-[0_30px_80px_rgba(0,0,0,0.55)]"
         >
           <div className="grid gap-8 lg:grid-cols-[1.1fr_1fr] lg:items-center">
-            <div
-              className="relative h-80 overflow-hidden rounded-3xl"
-              style={{
-                background: `radial-gradient(circle at 30% 20%, ${product.colorHex}40, transparent 60%), linear-gradient(140deg, #05050f, #19152a)`,
-              }}
-            >
-              <div
-                className="absolute inset-0 rounded-3xl border border-white/10"
-                style={{
-                  boxShadow: `0 25px 60px ${product.colorHex}40, inset 0 0 30px ${product.colorHex}55`,
-                }}
+            <div className="relative h-80 w-full overflow-hidden rounded-2xl">
+              <Image
+                src={product.image}
+                alt={product.name}
+                fill
+                sizes="100vw"
+                className="object-cover"
               />
-
-              <div className="relative flex h-full items-center justify-center gap-3">
-                {[...Array(7)].map((_, index) => {
-                  const size =
-                    20 + Math.round(Math.abs(Math.sin((index + 1) * 0.6)) * 18);
-                  const opacity = 0.55 + (index % 4) * 0.1;
-
-                  return (
-                    <motion.span
-                      key={index}
-                      animate={{ y: [0, -8, 0] }}
-                      transition={{
-                        duration: 3 + index * 0.25,
-                        repeat: Infinity,
-                        ease: "easeInOut",
-                        delay: index * 0.08,
-                      }}
-                      className="block rounded-full"
-                      style={{
-                        width: size,
-                        height: size,
-                        opacity,
-                        backgroundColor: product.colorHex,
-                        backgroundImage: `radial-gradient(circle at 30% 35%, rgba(255,255,255,0.75), transparent 55%)`,
-                        boxShadow: `0 0 ${size}px ${product.colorHex}88, 0 2px 6px rgba(0,0,0,0.5)`,
-                      }}
-                    />
-                  );
-                })}
-              </div>
-
-              <span className="absolute top-4 left-4 text-[10px] font-semibold uppercase tracking-[0.5em] text-white/70">
-                {product.collection}
-              </span>
             </div>
 
             <div className="flex flex-col gap-6">
