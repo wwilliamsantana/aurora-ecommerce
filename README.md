@@ -1,153 +1,159 @@
-# Aurora — Aurora Borealis Jewelry Store
+# Aurora — Loja de Joias Aurora Boreal
 
-A modern e-commerce experience for handcrafted jewelry inspired by the colors and movement of the Aurora Borealis.
+Uma experiência moderna de e-commerce de joias artesanais, inspirada nas cores e nos movimentos da Aurora Boreal.
 
-<img width="400" height="279" alt="Desktop 2026 08 05 - 12 (online-video-cutter com)(1)" src="https://github.com/user-attachments/assets/f761fa27-0574-43ea-8b25-a6bfdbc3c535" />
+<img width="400" height="279" alt="Prévia da loja Aurora" src="https://github.com/user-attachments/assets/f761fa27-0574-43ea-8b25-a6bfdbc3c535" />
 
+Aurora é uma loja fictícia de joias desenvolvida para demonstrar práticas modernas de desenvolvimento front-end, design de interfaces imersivas e experiências interativas. O projeto combina uma interface de compras responsiva com um plano de fundo dinâmico em WebGL, que se adapta às interações do usuário. Dessa forma, o ambiente visual acompanha a coleção de produtos selecionada, criando uma experiência integrada.
 
-Aurora is a fictional jewelry store built to showcase modern frontend development, immersive UI design, and interactive user experiences. The project combines a responsive shopping interface with a dynamic WebGL background that adapts to user interactions, creating a cohesive visual experience where the environment reflects the selected product collection.
-
-## Live
+## Acesse o projeto
 
 ### https://aurora-ecommerce-vert.vercel.app/
 
-##  Project Highlights
+## Destaques do projeto
 
-- Immersive landing page with animated Aurora Borealis background powered by WebGL
-- Dynamic product catalog with real product image switching based on selected color filters
-- Individual product pages with detailed information
-- Fully functional shopping cart with quantity management and live total calculation
-- Responsive design optimized for desktop and mobile devices
-- Modern UI built with performance and accessibility in mind
+- Página inicial imersiva com plano de fundo animado inspirado na Aurora Boreal, desenvolvido com WebGL.
+- Catálogo dinâmico de produtos, com troca real das imagens conforme a cor selecionada nos filtros.
+- Páginas individuais de produtos com informações detalhadas.
+- Carrinho de compras funcional, com gerenciamento de quantidades e cálculo automático do valor total.
+- Design responsivo, otimizado para computadores e dispositivos móveis.
+- Interface moderna, desenvolvida com foco em desempenho e acessibilidade.
 
+## Funcionalidades
 
-## Features
+### Catálogo de produtos
 
-### Product Catalog
+- 8 produtos de joalheria artesanal organizados em 3 coleções temáticas.
+- Sistema de filtros por cor.
+- Substituição dinâmica das imagens de acordo com a cor selecionada.
+- Transições e animações suaves na interface.
 
-- 8 handcrafted jewelry products organized into 3 themed collections
-- Color filtering system
-- Dynamic product image replacement according to the selected color
-- Smooth UI transitions and animations
+### Detalhes dos produtos
 
-### Product Details
+- Página individual para cada produto.
+- Descrição dos produtos.
+- Informações sobre preços.
+- Funcionalidade para adicionar produtos ao carrinho.
 
-- Individual product page
-- Product description
-- Pricing information
-- Add-to-cart functionality
+### Carrinho de compras
 
-### Shopping Cart
+- Adição e remoção de produtos.
+- Atualização das quantidades.
+- Cálculo automático dos preços.
+- Estado persistente do carrinho utilizando Zustand.
 
-- Add and remove products
-- Update quantities
-- Automatic price calculation
-- Persistent cart state using Zustand
+### Experiência interativa
 
-### Interactive Experience
+- Plano de fundo animado inspirado na Aurora Boreal, desenvolvido com WebGL.
+- Cores do plano de fundo alteradas dinamicamente conforme o filtro de produtos ativo.
+- Animações fluidas implementadas com Motion.
 
-- Animated Aurora Borealis background built with WebGL
-- Background colors dynamically change based on the active product filter
-- Fluid animations powered by Motion
+## Tecnologias utilizadas
 
-
-##  Tech Stack
-
-- **Next.js 16** (App Router)
-- **React 19**
+- **Next.js 16** 
+- **React 19** 
 - **TypeScript**
-- **Tailwind CSS 4**
-- **Motion** (animations)
-- **OGL** (WebGL rendering)
-- **Zustand** (state management)
-- **next/image** (image optimization)
+- **Tailwind CSS 4** 
+- **Motion** 
+- **OGL**
+- **Zustand**
+- **next/image** 
 
+## Design
 
+A identidade visual do projeto é inspirada nas luzes do norte e na estética do espaço profundo. Em vez de utilizar um plano de fundo estático, Aurora cria uma experiência de compra imersiva, na qual a animação em WebGL reage às interações do usuário.
 
-##  Design 
+À medida que os visitantes exploram joias de diferentes cores, o plano de fundo se transforma para acompanhar as seleções, reforçando a conexão entre a interface e os próprios produtos.
 
-The project's visual identity is inspired by the Northern Lights and deep space aesthetics. Instead of using a static background, Aurora creates an immersive shopping experience where the WebGL animation reacts to user interactions.
+Os principais aspectos considerados no desenvolvimento foram:
 
-As visitors browse different jewelry colors, the background transitions accordingly, strengthening the connection between the interface and the products themselves.
+- Consistência visual.
+- Animações suaves.
+- Layouts responsivos.
+- Tipografia limpa.
+- Otimização de desempenho.
+- Arquitetura baseada em componentes.
 
-Special attention was given to:
+## Como executar o projeto
 
-- Visual consistency
-- Smooth animations
-- Responsive layouts
-- Clean typography
-- Performance optimization
-- Component-based architecture
+### Pré-requisitos
 
+- Node.js 18 ou superior.
 
-##  Getting Started
+### Instalação
 
-### Prerequisites
-
-- Node.js 18+
-
-### Installation
+Clone o repositório:
 
 ```bash
 git clone https://github.com/wwilliamsantana/aurora-ecommerce.git
+```
 
+Acesse a pasta do projeto:
+
+```bash
 cd aurora
+```
 
+Instale as dependências:
+
+```bash
 npm install
+```
 
+Inicie o servidor de desenvolvimento:
+
+```bash
 npm run dev
 ```
 
-Open:
+Abra o endereço abaixo no navegador:
 
-```
+```text
 http://localhost:3000
 ```
 
+## Coleções de produtos
 
+### Coleção Stellar
 
-##  Product Collections
+Peças artesanais em verde-esmeralda e rosa aurora, inspiradas nas luzes mais brilhantes da Aurora Boreal.
 
-### Stellar Collection
+### Coleção Solar
 
-Emerald green and Aurora pink handcrafted pieces inspired by the brightest northern lights.
+Joias douradas e em tons de ametista, com cores quentes inspiradas no universo celestial.
 
-### Solar Collection
+### Coleção Arctic
 
-Golden and amethyst jewelry with warm celestial tones.
+Peças em azul-celeste e tons inspirados nas regiões polares, com cores frias e elegantes.
 
-### Arctic Collection
+## Objetivos do projeto
 
-Sky blue and polar-inspired pieces featuring cool, elegant colors.
+Este projeto foi desenvolvido para demonstrar:
 
+- Arquitetura moderna com React e Next.js.
+- Animações avançadas no front-end.
+- Integração de WebGL em interfaces preparadas para aplicações reais.
+- Desenvolvimento de interfaces responsivas para e-commerce.
+- Gerenciamento de estado com Zustand.
+- Desenvolvimento orientado a componentes.
+- Práticas de engenharia front-end com foco em desempenho.
 
+## Prévia do projeto
 
-##  Project Goals
+<img width="850" src="https://github.com/user-attachments/assets/e0de61ac-858e-4db5-a11e-7c7e7414a729" alt="Prévia da interface da Aurora 1" />
 
-This project was developed to demonstrate:
+<img width="850" src="https://github.com/user-attachments/assets/7a554cc5-ce3e-4fdb-a6eb-bed0066bde2e" alt="Prévia da interface da Aurora 2" />
 
-- Modern React and Next.js architecture
-- Advanced frontend animations
-- WebGL integration in production-ready interfaces
-- Responsive e-commerce UI development
-- State management with Zustand
-- Component-driven design
-- Performance-focused frontend engineering
+<img width="850" src="https://github.com/user-attachments/assets/e636e775-f25f-4fd2-b5ea-2be7dafea045" alt="Prévia da interface da Aurora 3" />
 
+<img width="850" src="https://github.com/user-attachments/assets/9c7bd05e-2325-4c6f-a85b-2f8cd2e2cc54" alt="Prévia da interface da Aurora 4" />
 
+<img width="850" src="https://github.com/user-attachments/assets/77d7a7a9-d6bf-4f28-afd3-e2815fdfe767" alt="Prévia da interface da Aurora 5" />
 
-##  Preview
-<img width="850"  src="https://github.com/user-attachments/assets/e0de61ac-858e-4db5-a11e-7c7e7414a729" />
-<img width="850"  src="https://github.com/user-attachments/assets/7a554cc5-ce3e-4fdb-a6eb-bed0066bde2e" />
+<img width="850" src="https://github.com/user-attachments/assets/f4ce7adc-0a7d-4f41-b65b-0c623d1f472c" alt="Prévia da interface da Aurora 6" />
 
-<img width="850"   src="https://github.com/user-attachments/assets/e636e775-f25f-4fd2-b5ea-2be7dafea045" />
-<img width="850"   src="https://github.com/user-attachments/assets/9c7bd05e-2325-4c6f-a85b-2f8cd2e2cc54" />
+<img width="850" src="https://github.com/user-attachments/assets/f37f04de-2d1f-46a1-a8e9-3bc9f23c282c" alt="Prévia da interface da Aurora 7" />
 
-<img width="850"  src="https://github.com/user-attachments/assets/77d7a7a9-d6bf-4f28-afd3-e2815fdfe767" />
+<img width="850" src="https://github.com/user-attachments/assets/7599a7ce-fd49-44c2-bb48-b038a2dc5767" alt="Prévia da interface da Aurora 8" />
 
-<img width="850"   src="https://github.com/user-attachments/assets/f4ce7adc-0a7d-4f41-b65b-0c623d1f472c" />
-
-<img width="850"   src="https://github.com/user-attachments/assets/f37f04de-2d1f-46a1-a8e9-3bc9f23c282c" />
-<img width="850"   src="https://github.com/user-attachments/assets/7599a7ce-fd49-44c2-bb48-b038a2dc5767" />
-<img width="850"  src="https://github.com/user-attachments/assets/7d74dba8-f285-4aef-89ea-f06eabdbde12" />
-
+<img width="850" src="https://github.com/user-attachments/assets/7d74dba8-f285-4aef-89ea-f06eabdbde12" alt="Prévia da interface da Aurora 9" />
