@@ -1,4 +1,4 @@
-# Aurora — Loja de Joias Aurora Boreal
+# Aurora 
 
 Uma experiência moderna de e-commerce de joias artesanais, inspirada nas cores e nos movimentos da Aurora Boreal.
 
